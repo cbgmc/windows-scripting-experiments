@@ -1,0 +1,382 @@
+Windows PowerShell
+Copyright (C) 2015 Microsoft Corporation. All rights reserved.
+
+PS C:\Users\gchampion> cd d:\
+PS D:\> ll
+ll : The term 'll' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ ll
++ ~~
+    + CategoryInfo          : ObjectNotFound: (ll:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\> ls
+
+
+    Directory: D:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       11/18/2016   3:34 PM                MatrixDev
+d-----        6/14/2016   1:19 PM                Program Files
+da----        6/14/2016   1:23 PM                Program Files (x86)
+
+
+PS D:\> mv
+
+cmdlet Move-Item at command pipeline position 1
+Supply values for the following parameters:
+Path[0]: PS D:\> ls
+
+
+    Directory: D:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       11/18/2016   3:34 PM                MatrixDev
+d-----        6/14/2016   1:19 PM                Program Files
+da----        6/14/2016   1:23 PM                Program Files (x86)
+
+
+PS D:\> cd .\MatrixDev\
+PS D:\MatrixDev> ls
+
+
+    Directory: D:\MatrixDev
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        6/17/2016  11:29 AM                Makebox_log
+-a----       10/10/2016  12:12 PM         384000 Makebox.exe
+-a----       10/10/2016  12:12 PM          30208 MakeBox.pdb
+-a----       10/10/2016  12:12 PM            115 MakeBox.xml
+-a----       11/18/2016   3:33 PM           7984 makeboxDPITFS4_0.bat
+-a----       10/10/2016  12:12 PM          70144 MakeBoxLib.dll
+-a----       10/10/2016  12:12 PM          97792 MakeBoxLib.pdb
+-a----       10/10/2016  12:12 PM            118 MakeBoxLib.xml
+-a----       10/10/2016  12:05 PM           7635 ProjectFileReferences.xml
+-a----        6/17/2016  11:26 AM            163 sql.atl.bat
+-a----        6/16/2016  12:16 AM           6903 TFSClone.vbs
+------         5/9/2016   2:46 PM           6607 TFSModify.vbs
+-a----       10/10/2016  11:43 AM         107008 updatemakebox.exe
+-a----       10/10/2016  11:43 AM          11776 UpdateMakebox.pdb
+
+
+PS D:\MatrixDev> .\Makebox.exe
+PS D:\MatrixDev> .\Makebox.exe
+PS D:\MatrixDev> ls
+
+
+    Directory: D:\MatrixDev
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----       11/18/2016   3:51 PM                01win10checkout
+d-----       11/18/2016   4:30 PM                02win10checkout
+d-----       11/18/2016   4:36 PM                Makebox_log
+-a----       10/10/2016  12:12 PM         384000 Makebox.exe
+-a----       10/10/2016  12:12 PM          30208 MakeBox.pdb
+-a----       10/10/2016  12:12 PM            115 MakeBox.xml
+-a----       11/18/2016   3:33 PM           7984 makeboxDPITFS4_0.bat
+-a----       10/10/2016  12:12 PM          70144 MakeBoxLib.dll
+-a----       10/10/2016  12:12 PM          97792 MakeBoxLib.pdb
+-a----       10/10/2016  12:12 PM            118 MakeBoxLib.xml
+-a----       11/18/2016  10:39 AM           7635 ProjectFileReferences.xml
+-a----        6/17/2016  11:26 AM            163 sql.atl.bat
+-a----       11/18/2016   2:26 PM           6903 TFSClone.vbs
+-a----         5/7/2015   7:56 AM           3444 TFSGetLatestVersion.vbs
+------         5/9/2016   2:46 PM           6607 TFSModify.vbs
+-a----       10/10/2016  11:43 AM         107008 updatemakebox.exe
+-a----       10/10/2016  11:43 AM          11776 UpdateMakebox.pdb
+-a----       11/18/2016   4:36 PM            339 web.config
+
+
+PS D:\MatrixDev> .\makeboxDPITFS4_0.bat 01win10dpi
+Getting Files from: http://tfs.careerbuilder.com:8080/tfs
+Branch point is: $/Matrix/Source/Main
+Microsoft (R) Windows Script Host Version 5.812
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Attempting to use Visual Studio 2012 TF.exe
+Deleting existing workspace (if exists)...
+Creating a new workspace...
+Unmapping workfold (if exists)...
+Mapping workfold the right way...
+Putting some folders on ignore (cloak)...
+Cloaking (ignoring) AxiomCore
+Cloaking (ignoring) AxiomDPICore
+Cloaking (ignoring) AxiomDPIPSECore
+Cloaking (ignoring) AxiomDPISys
+Cloaking (ignoring) AxiomPSECore
+Cloaking (ignoring) AxiomSys
+Cloaking (ignoring) AxiomTestCore
+Cloaking (ignoring) AxiomTestSuite
+Cloaking (ignoring) BizTalkApplications
+Cloaking (ignoring) CACore
+Cloaking (ignoring) CADashboard
+Cloaking (ignoring) CADataCore
+Cloaking (ignoring) CASecurityCore
+Cloaking (ignoring) CAValidationCore
+Cloaking (ignoring) CAWebAPICore
+Cloaking (ignoring) CAWebAPILoggingCore
+Cloaking (ignoring) CAWebAPIVersioning
+Cloaking (ignoring) CBPSECore
+Cloaking (ignoring) CBSys
+Cloaking (ignoring) DataServicesCore
+Cloaking (ignoring) EnterpriseTestCore
+Cloaking (ignoring) FinancialCore
+Cloaking (ignoring) FinancialPSECore
+Cloaking (ignoring) FinancialSys
+Cloaking (ignoring) FinancialTestCore
+Cloaking (ignoring) NexusCore
+Cloaking (ignoring) NexusPSECore
+Cloaking (ignoring) NexusSys
+Cloaking (ignoring) NexusTestCore
+Cloaking (ignoring) NexusTestSuite
+Cloaking (ignoring) PartnerCore
+Cloaking (ignoring) PartnerPortalCore
+Cloaking (ignoring) PartnerPortalSys
+Cloaking (ignoring) PartnerPortalPSECore
+Cloaking (ignoring) PartnerPortalTestCore
+Cloaking (ignoring) PartnerPortalTestSuite
+Cloaking (ignoring) Pilots
+Cloaking (ignoring) RDASys
+Cloaking (ignoring) ReportingCoreV2
+Cloaking (ignoring) SharepointSys
+Cloaking (ignoring) SourcingSolutionCore
+Cloaking (ignoring) StatsCore
+Cloaking (ignoring) StatsSys
+Cloaking (ignoring) TestCore
+Mapping overrides...
+Getting all the code, will take a few minutes...
+You do not have sufficient privilege to perform this operation.
+You do not have sufficient privilege to perform this operation.
+You do not have sufficient privilege to perform this operation.
+You do not have sufficient privilege to perform this operation.
+You do not have sufficient privilege to perform this operation.
+
+SETTING UP APPLICATION POOL...
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+Creating application pool...
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+Application pool has been created...
+
+
+SETTING UP APPLICATIONS IN IIS...
+
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+
+ERROR ( message:Configuration error
+Filename: redirection.config
+Line Number: 0
+Description: Cannot read configuration file due to insufficient permissions
+. )
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'chmod' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+'sed' is not recognized as an internal or external command,
+operable program or batch file.
+'mv' is not recognized as an internal or external command,
+operable program or batch file.
+Access is denied.
+PS D:\MatrixDev>
